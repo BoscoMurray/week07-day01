@@ -50,14 +50,14 @@ public class RankingListTest {
 
     @Test
     public void canAddMovie() {
-        assertEquals("The Goonies", rankingList.getMovie(1));
+        assertEquals("The Goonies", rankingList.getMovie(1).getTitle());
     }
 
     @Test
     public void canChangeLastMovie() {
         Movie movie11 = new Movie("One Flew Over The Cuckoo's Nest", "Drama", 10);
         rankingList.addMovie(movie11);
-        assertEquals("One Flew Over The Cuckoo's Nest", rankingList.getMovie(10));
+        assertEquals("One Flew Over The Cuckoo's Nest", rankingList.getMovie(10).getTitle());
     }
 
 }

@@ -7,16 +7,15 @@ package com.example.user.week07_day01_movie_rankings;
 public class RankingList {
 
 //    private String[] rankingList;
-    private String[] rankingList = new String[10];
+    private Movie[] rankingList = new Movie[10];
 
-    public String getMovie(int rank) {
+    public Movie getMovie(int rank) {
         return rankingList[rank -1];
     }
 
     public void addMovie(Movie movie) {
         int rank = movie.getRanking() -1;
-        String title = movie.getTitle();
-        this.rankingList[rank] = title;
+        this.rankingList[rank] = movie;
     }
 
 
